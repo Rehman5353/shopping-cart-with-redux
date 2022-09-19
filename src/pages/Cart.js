@@ -16,7 +16,6 @@ export const Cart = () => {
 
   const handleRemove = (id) => {
     dispatch(remove(id));
-    alert("dd");
   }
   return (
     <>
