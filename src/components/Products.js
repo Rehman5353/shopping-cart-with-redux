@@ -10,12 +10,14 @@ export const Products = () => {
     const [ShoppingProducts, setProduct] = useState([])
 
     useEffect(() => {
+
      const  fetchProduct = async () => {
      const res = await fetch('https://fakestoreapi.com/products');
      
      const data = await res.json(); 
        console.log(data);
         setProduct(data)
+      
       }
 
       fetchProduct();
@@ -40,7 +42,7 @@ export const Products = () => {
                      <h1>{productitem.price}</h1>
                      <p className='text'>{productitem.description}</p>
                    </div>
-                   <Button onClick={()=> handleAdd( productitem)}  className='ml-5 mr-5  mt-2 btn'> Add To Cart </Button> 
+                   <Button onClick={()=> handleAdd( productitem)}  className='ml-5 mr-5 w-50 mx-auto mt-2 btn'> Add To Cart </Button> 
                 </div>
             ))
            }

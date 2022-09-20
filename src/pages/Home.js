@@ -9,6 +9,7 @@ export const Home = () => {
     <section className='m-3'>
     <Products></Products>
     </section>
+    
     </Container>
     </>
   )

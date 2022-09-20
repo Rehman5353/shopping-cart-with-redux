@@ -24,8 +24,7 @@ export const Cart = () => {
               <div className='cartWrapper'>
    {   
               productItem.map(product =>  (
-              
-                <Card className='cards' style={{ width: '18rem' }}>
+              <Card className='cards mt-4' style={{ width: '18rem' }}>
                 <Image variant="top" className='card-img' src={product.image} />
                 <Card.Body>
                   <Card.Title>{product.price}</Card.Title>
@@ -35,7 +34,6 @@ export const Cart = () => {
                   <Button onClick={()=> handleRemove(product.id)} variant="danger">Remove</Button>
                 </Card.Body>
               </Card>
-              
                 ))
 
    }
