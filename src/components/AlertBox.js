@@ -1,14 +1,13 @@
 
 import React from 'react'
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import { remove } from '../store/cartSlice';
+import { remove } from '../store/buySlice';
 
 export const AlertBox = ({ setLgShow , modalOpen }) => {
-    const  productItem   = useSelector(state => state.cart);
+    const  productItem   = useSelector(state => state.buys);
 
     const  dispatch   = useDispatch();
     

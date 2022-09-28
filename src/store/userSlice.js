@@ -5,19 +5,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = [];
 
 
-const buySlice = createSlice({
-    name: "buy",
+const userSlice = createSlice({
+    name: "user",
     initialState,
     reducers : {
-            add(state,action){
+            login(state,action){
                state.push(action.payload);
             },
-            remove(state,action ) {
+            logout(state,action ) {
               return state.filter((item) =>  item.id !== action.payload);
             }, 
     }
 })
 
-export const {add , remove } = buySlice.actions;
+export const {login , logout } = buySlice.actions;
 
-export default buySlice.reducer;
+export default userSlice.reducer;
